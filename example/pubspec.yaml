@@ -1,0 +1,23 @@
+name: open_settings_example
+description: Demonstrates how to use the open_settings plugin.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: ">=2.10.4 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  open_settings:
+    path: ../
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
