@@ -1,3 +1,6 @@
+## open_settings 2.0.1
+change pubspec.yaml
+
 ## open_settings 2.0.0
 move to Flutter2
 add below method :
