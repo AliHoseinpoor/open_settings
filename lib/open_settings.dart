@@ -162,7 +162,8 @@ class OpenSettings {
 
   /// Open ignore_background_data_restrictions settings
   static Future<void> openIgnoreBackgroundDataRestrictionsSetting() async {
-    _channel.invokeMethod('openSettings', 'ignore_background_data_restrictions');
+    _channel.invokeMethod(
+        'openSettings', 'ignore_background_data_restrictions');
   }
 
   /// Open ignore_battery_optimization settings
@@ -207,7 +208,8 @@ class OpenSettings {
 
   /// Open manage_app_all_files_access_permission settings
   static Future<void> openManageAppAllFilesAccessPermissionSetting() async {
-    _channel.invokeMethod('openSettings', 'manage_app_all_files_access_permission');
+    _channel.invokeMethod(
+        'openSettings', 'manage_app_all_files_access_permission');
   }
 
   /// Open manage_default_apps settings
@@ -239,16 +241,6 @@ class OpenSettings {
   static Future<void> openNetworkOperatorSetting() async {
     _channel.invokeMethod('openSettings', 'network_operator');
   }
-
-  // /// Open nfcsharings settings
-  // static Future<void> openNFCSharingsSetting() async {
-  //   _channel.invokeMethod('openSettings', 'nfcsharings');
-  // }
-  //
-  // /// Open nfc_payment settings
-  // static Future<void> openNFCPaymentSetting() async {
-  //   _channel.invokeMethod('openSettings', 'nfc_payment');
-  // }
 
   /// Open nfc settings
   static Future<void> openNFCSetting() async {
@@ -304,16 +296,6 @@ class OpenSettings {
   static Future<void> openQuickLaunchSetting() async {
     _channel.invokeMethod('openSettings', 'quick_launch');
   }
-
-  // /// Open request_ignore_battery_optimizations settings
-  // static Future<void> openRequestIgnoreBatteryOptimizationsSetting() async {
-  //   _channel.invokeMethod('openSettings', 'request_ignore_battery_optimizations');
-  // }
-  //
-  // /// Open request_set_autofill_service settings
-  // static Future<void> openRequestSetAutofillServiceSetting() async {
-  //   _channel.invokeMethod('openSettings', 'request_set_autofill_service');
-  // }
 
   /// Open show_regulatory_info settings
   static Future<void> openShowRegulatoryInfoSetting() async {
