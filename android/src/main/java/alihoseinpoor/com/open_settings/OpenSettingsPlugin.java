@@ -98,7 +98,21 @@ public class OpenSettingsPlugin implements FlutterPlugin, MethodCallHandler {
 
                 case "application_details":
                     target = "android.settings.APPLICATION_DETAILS_SETTINGS";
-                    handleJumpToSetting(target);
+                    try {
+                        handleJumpToSetting(target);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        try {
+                            String packageName = mContext.getPackageName();
+                            Intent intent = new Intent("android.settings.APPLICATION_DETAILS_SETTINGS");
+                            Uri uri = Uri.fromParts("package", packageName, null);
+                            intent.setData(uri);
+                            intent.setFlags(0x10000000);
+                            mContext.startActivity(intent);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
                     break;
 
                 case "application_development":
