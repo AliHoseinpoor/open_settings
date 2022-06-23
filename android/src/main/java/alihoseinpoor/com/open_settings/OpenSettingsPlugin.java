@@ -2,6 +2,7 @@ package alihoseinpoor.com.open_settings;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 
 import androidx.annotation.NonNull;
 
@@ -109,8 +110,8 @@ public class OpenSettingsPlugin implements FlutterPlugin, MethodCallHandler {
                             intent.setData(uri);
                             intent.setFlags(0x10000000);
                             mContext.startActivity(intent);
-                        } catch (Exception e) {
-                            e.printStackTrace();
+                        } catch (Exception e2) {
+                            e2.printStackTrace();
                         }
                     }
                     break;
