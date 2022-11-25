@@ -131,11 +131,11 @@ public class OpenSettingsPlugin implements FlutterPlugin, MethodCallHandler {
 					intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
 
 					//for Android 5-7
-					intent.putExtra("app_package", context.getPackageName());
-					intent.putExtra("app_uid", context.getApplicationInfo().uid);
+					intent.putExtra("app_package", mContext.getPackageName());
+					intent.putExtra("app_uid", mContext.getApplicationInfo().uid);
 
 					// for Android 8 and above
-					intent.putExtra("android.provider.extra.APP_PACKAGE", context.getPackageName());
+					intent.putExtra("android.provider.extra.APP_PACKAGE", mContext.getPackageName());
 					handleJumpToSetting(intent);
 					break;
 
